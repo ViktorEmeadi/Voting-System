@@ -1,15 +1,17 @@
 package com.example.Voting.System.data.model;
 
-import lombok.Getter;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
-@Getter
+
 public enum Party {
-    PDP("PDP"),
-    LP("LP"),
-    APC("APC");
+    APC("APC"), PDP("PDP"), LP("LP");
     private final String name;
 
     Party(String name) {
         this.name = name;
+    }
+    public String getName(){
+        return name;
     }
 }
